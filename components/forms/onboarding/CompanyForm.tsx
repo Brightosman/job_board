@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { countryList } from "@/app/utils/countriesList";
 import { Textarea } from '@/components/ui/textarea'
-import { UploadDropzone } from '@/components/general/UploadThingReExported'
+import { UploadDropzone } from '@/components/general/UploadThingReExport'
 import { createCompany } from '@/app/actions'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'

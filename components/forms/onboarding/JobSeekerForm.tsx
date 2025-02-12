@@ -1,6 +1,6 @@
 import { createJobSeeker } from '@/app/actions';
 import { jobSeekerSchema } from '@/app/utils/zodSchemas';
-import { UploadDropzone } from '@/components/general/UploadThingReExported';
+import { UploadDropzone } from '@/components/general/UploadThingReExport';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';

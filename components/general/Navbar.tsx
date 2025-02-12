@@ -7,6 +7,7 @@ import { ThemeToggle } from './ThemeToggle'
 import { auth, signOut } from '@/app/utils/auth'
 import { redirect } from 'next/navigation'
 import { LogInIcon, LogOut, User2 } from 'lucide-react'
+import UserDropDown from './UserDropDown'
 
 export default async function Navbar() {
     const session = await auth()
@@ -22,10 +23,28 @@ export default async function Navbar() {
             </h1>
         </Link>
 
-        <div className=" flex items-center gap-4">
+        {/*Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-5">
             <ThemeToggle />
 
+            <Link className={buttonVariants({size: "lg"})} href="/post-job">
+                PostJob
+            </Link>
+
             {session?.user ? (
+                <UserDropDown 
+                    email={session.user.email as string}
+                    image={session.user.image as string}
+                    name={session.user.name as string}
+                />
+            ):(
+                <Link href="/login" className={buttonVariants({variant:'outline', size:"lg"})}>
+                    <User2 />
+                    Login
+                </Link>
+            )}
+
+            {/* {session?.user ? (
                 <form action={async () => {
                     "use server";
                     await signOut({ redirectTo: "/"});
@@ -38,7 +57,7 @@ export default async function Navbar() {
                     <User2 />
                     Login
                 </Link>
-            )}
+            )} */}
             
         </div>
     </nav>
