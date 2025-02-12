@@ -1,4 +1,5 @@
 import JobFilters from "@/components/general/JobFilters";
+import JobListings from "@/components/general/JobListings";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -10,7 +11,9 @@ export default function Home() {
         <JobFilters />
       </Card>
 
-      <Card className="col-span-2"></Card>
+      <Card className="col-span-2">
+        <JobListings />
+      </Card>
 
       <h1>Hello World</h1>
     </section>
