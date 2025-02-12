@@ -81,10 +81,10 @@ export default async function PostJobPage() {
         <CreateJobForm 
           companyAbout={data.about}
           companyLocation={data.location}
-          companyLogo={data.logo}
+          companyLogo={data.logo || "/logo.svg"}
           companyName={data.name}
           companyXAccount={data.xAccount}
-          companyWebsite={data.website}
+          companyWebsite={data.website || "https://baba9ja.com"}
         />
 
         <div className="col-span-1">
