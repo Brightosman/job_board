@@ -1,6 +1,7 @@
 import { prisma } from '@/app/utils/db'
 import React from 'react'
 import { EmptyState } from './EmptyState';
+import { JobCard } from './JobCard';
 
 async function getData(){
     const data = await prisma.jobPost.findMany({
@@ -40,7 +41,7 @@ export default async function JobListings() {
       {data.length > 0 ? (
         <div className="flex flex-col gap-6">
           {data.map((job) => (
-            <p>{job.jobTitle}</p>
+            <JobCard job={job} key={job.id} />
           ))}
         </div>
       ) : (
