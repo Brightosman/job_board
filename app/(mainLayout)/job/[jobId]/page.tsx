@@ -165,7 +165,7 @@ export default async function JobIdPage({ params }: { params: Params }) {
             <Card className="p-6">
                 <div className="space-y-4">
                     <div>
-                        <Image src={data.company.logo} alt="company logo" width={60} height={60} className="rounded-full size-12" />
+                        <Image src={data.company.logo as string} alt="company logo" width={60} height={60} className="rounded-full size-12" />
 
                         <div className='flex flex-col'>
                             <h3 className="font-semibold">{data.company.name}</h3>
