@@ -14,8 +14,6 @@ export default function Home() {
       <Card className="col-span-2">
         <JobListings />
       </Card>
-
-      <h1>Hello World</h1>
     </section>
   );
 }
